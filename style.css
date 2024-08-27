@@ -1,0 +1,394 @@
+
+body {
+    overflow: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#spotlight {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#overlay {
+    background: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.4) 5%,
+        rgba(0, 0, 0, 1) 10%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    z-index: 1;
+}
+
+#overlay-color {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#rand-number-display {
+    font-size: 3rem;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modal {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border-bottom: 1.5px solid #d6d6d6;
+    max-width: 480px;
+    width: 480px;
+    border-radius: 4px;
+}
+
+.modal-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    /* border-bottom: 1px solid #d6d6d6; */
+}
+
+.modal-content {
+    padding: 20px 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.modal-foot {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+
+.modal-foot button {
+    padding: 10px 0px;
+    width: 160px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#btn-fool {
+    background-color: #f4b836;
+    color: white;
+    font-weight: 700;
+}
+
+#advice {
+    display: none;
+}
+
+.text-start {
+    text-align: start;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+
+.plan {
+    border: #d6d6d6 1px solid;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: start;
+    width: 100%;
+}
+
+#btn-fool {
+    position:  relative;
+    z-index: 10;
+    transition: linear 0.5s;
+}
+
+#modal-btn-close {
+    position:  relative;
+    z-index: 11;
+    transition: linear 0.5s;
+}
+
+.game-bg {
+    position: absolute;
+    z-index: -1;
+}
+
+.mb {
+    margin-bottom: 10px;
+}
+
+#button-container {
+    position: relative;
+}
+
+#button-container button {
+    position: absolute;
+    z-index: 10;
+    transition: linear 0.5s;
+}
+
+#btn-color {
+    top: -15px;
+    right: 78px;
+    background-color: rgba(240, 206, 38, 0.197);
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+
+#btn-count-click {
+    top: 240px;
+    left: 435px;
+    background-color: rgba(49, 90, 17, 0.197);
+    border: none;
+    width: 40px;
+    height: 40px;
+}
+
+#btn-rand-number {
+    bottom: 135px;
+    left: 140px;
+    background-color: #70b9e0ae;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+
+#btn-spider {
+    top: 30px;
+    right: 205px;
+    background-color: #895b1b4e;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+
+#btn-submit {
+    bottom: 400px;
+    left: -50px;
+    background-color: #f4b836;
+    color: white;
+    font-weight: 700;
+    border: none;
+    width: 100px;
+    height: 40px;
+}
+
+#spider-animation{
+    position: absolute;
+    z-index: 100;
+    background: transparent;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+#rand-indice{
+    position: absolute;
+    width: 460px;
+    bottom: 60px;
+    left: 20px;
+    display: none;
+}
+.big-size {
+    font-size: 2rem;
+}
+
+input {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #d6d6d6;
+}
+
+.absolute {
+    position: absolute;
+    z-index: 50;
+}
+
+.gitf-gift {
+    bottom: -50px;
+}
+
+.gift-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 100px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.gift-container .gift-box {
+    width: 300px;
+    height: 120px;
+    background-color: #ec9c4a;
+    position: relative;
+    cursor: pointer;
+    animation: Bounce 4s ease infinite forwards;
+}
+
+.gift-container.active {
+    animation: Vibration 1s ease forwards !important;
+}
+
+@keyframes Bounce {
+    0% {
+        transform: translateY(-24px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-24px);
+    }
+}
+
+.gift-box::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 120px;
+    background-color: #e76f51;
+    left: 124px;
+}
+
+.gift-box::after {
+    content: '';
+    position: absolute;
+    box-shadow: inset 0 10px rgba(0, 0, 0, .3);
+    width: 300px;
+    height: 120px;
+}
+
+.gift-click {
+    position: absolute;
+    background: #ec9c4a;
+    width: 340px;
+    height: 90px;
+    top: -90px;
+    left: -20px;
+    z-index: 50;
+}
+
+.gift-click::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 90px;
+    background-color: #e76f51;
+    left: 144px;
+    z-index: 51;
+}
+
+.gift-click::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 0;
+    border-bottom: 60px solid #e76f51;
+    border-top: 60px solid #e76f51;
+    border-right: 0px solid transparent;
+    border-left: 60px solid transparent;
+    transform: rotate(90deg);
+    top: -93px;
+    left: 136px;
+    z-index: 52;
+}
+
+.gift-click-active {
+    transform: translateY(-240px);
+    transition: linear 0.5s;
+}
+
+.gift-shadow {
+    content: "";
+    position: absolute;
+    width: 340px;
+    height: 40px;
+    background: rgba(0, 0, 0, .4);
+    top: 100px;
+    border-radius: 50%;
+    left: -4px;
+    animation: BounceOut 4s ease infinite forwards;
+}
+
+.active {
+    animation: none !important;
+}
+
+@keyframes Vibration {
+    0% {
+        transform:  scale(1,1);
+    }
+    25% {
+        transform:  scale(.95,1.05);
+    }
+    50% {
+        transform:  scale(1.1,.9);
+    }
+    70% {
+        transform:  scale(.9,1.1);
+    }
+    100% {
+        transform:  scale(1,1);
+    }
+}
+
+@keyframes BounceOut {
+    0% {
+        transform: translateY(24px);
+        scale: .7;
+    }
+    50% {
+        transform: translateY(0);
+        scale: 1;
+    }
+    100% {
+        transform: translateY(24px);
+        scale: .7;
+    }
+}

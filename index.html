@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darkness challenge</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js" defer></script>
+    
+    <script defer  src="spotlight.js"></script>
+    <script defer type="module" src="modal.js" ></script>
+    <script defer type="module" src="lottie.js"></script>
+
+    <script defer type="module" src="btn-color.js"></script>
+    <script defer type="module" src="btn-count-click.js"></script>
+    <script defer type="module" src="btn-rand-number.js"></script>
+    <script defer type="module" src="btn-spider.js"></script>
+    <script defer type="module" src="btn-submit.js"></script>
+</head>
+<body>
+    <script defer type="module" src="main.js"></script>
+   
+    <div id="spider-animation">
+        <canvas id="dotLottie-canvas"></canvas>
+    </div>
+
+    <p id="overlay"></p>
+    <p id="overlay-color"></p>
+    
+
+    <main id="spotlight">
+        <div class="flex">
+            <img class="game-bg" src="./bedroom-interior.png" alt="">
+            <div id="button-container">
+                <button id="btn-color" class="btn"></button>
+                <button id="btn-count-click" class="btn"></button>
+               
+                <button id="btn-rand-number" class="btn">🤣</button>
+                <button id="btn-spider" class="btn big-size">🕷</button>
+                <button id="btn-submit" class="btn">Allumer</button>
+                <p id="rand-indice">
+                    Sort ta loupe 🧐 je suis peut etre en haut<br/>
+                    ou en bas, ou à droite ou à gauche 🤣🤣🤣
+                </p>
+            </div>
+       
+        </div>
+        <span id="rand-number-display"></span>
+        <div class="absolute gitf-gift">
+            <div class="gift-container">
+                <div class="gift-shadow"></div>
+                <div class="gift-box">
+                    <div class="gift-click"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal">
+        <div id="advice" class="modal-container">
+            <div class="modal-head">
+                <div>
+                    <h2>C'est trop difficile 🤧 ?</h2>
+                </div>
+            </div>
+            <div class="modal-content">
+                <p id="advice-1">
+                    En cliquant sur le bouton "Continuer", 
+                    vous allez débloquer une information importante
+                    qui vous aidera à résoudre le challenge.<br/>
+                    Êtes-vous sûr de vouloir continuer ?
+                </p>
+                <div id="advice-2">
+                    <h4 class="mb text-start">
+                        Ca bouge dans toutes les sens hein 🤣?
+                    </h4>
+                    <p class="text-start mb">
+                        Quoi tu veux un indice 🤣🤣🤣 ? GRATUITEMENT ?<br/>
+                        Choisissez un plan pour obtenir le maximun<br/> 
+                        d'indice possible. 🥳
+                    </p>
+                    <div class="flex">
+                        <div class="plan basic">
+                            <h3>Basic</h3>
+                            <p>
+                                
+                            </p>
+                            <p>1 indice</p>
+                            <p>
+                                <span class="price">1000 FCFA</span>
+                            </p>
+                        </div>
+                        <div class="plan premium">
+                            <h3>Premium</h3>
+                            <p>2 indices</p>
+                            <p>
+                                <span class="price">2000 FCFA</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p id="advice-3">
+                   Bon d'accord, je vous donne un indice gratuit 🤣🤣🤣. La 
+                   prochain fois, vous devrez payer pour avoir des indices.🚶‍♂️
+                   <br/> 
+                   Indice: Bouge 1, Bouge 2
+                </p>
+            </div>
+            <div class="modal-foot">
+                <button class="modal-btn-close">Annuler</button>
+                <button id="btn-fool">Continuer</button>
+                <div id="div-emoji"></div>
+            </div>
+        </div>
+        <div id="submit-modal" class="modal-container">
+            <div class="modal-head">
+                <h2>
+                    Allumer la lumière
+                </h2>
+            </div>
+            <div class="modal-content">
+                <p>
+                    Entrez le code secret pour allumer la lumière
+                    <br/>
+                    <input type="text" id="code" placeholder="Code secret">
+                </p>
+            </div>
+            <div class="modal-foot">
+                <button class="modal-btn-close">Fermer</button>
+                <button id="validate-code">Valider</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
