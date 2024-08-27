@@ -273,6 +273,7 @@ input {
 
 .gift-container.active {
     animation: Vibration 1s ease forwards !important;
+    z-index: 1000;
 }
 
 @keyframes Bounce {
@@ -354,6 +355,22 @@ input {
     border-radius: 50%;
     left: -4px;
     animation: BounceOut 4s ease infinite forwards;
+}
+
+.gift-content {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    background: #ec9c4a;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: -1;
+    font-size: 1.2rem;
+    transform: translateY(0px);
+}
+
+.gift-content.active {
+    transform: translateY(-100px);
 }
 
 .active {

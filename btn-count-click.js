@@ -4,7 +4,6 @@ document.getElementById("advice-2").style.display = 'none';
 document.getElementById("advice-3").style.display = 'none';
 
 let step = 1;
-let canClick = false;
 
 const movePositions = [
     { x: -100, y: -250 }, 
@@ -18,8 +17,9 @@ let currentPosition = 0;
 // rand number between 4 and 8
 
 function handleCountClick () {
+    step = 1;
+    currentPosition = 0;
     document.getElementById('advice').style.display = 'block';
-    console.log('handleCountClick');
     document.getElementById('btn-fool').addEventListener('mouseover', animateButton);
 }
 

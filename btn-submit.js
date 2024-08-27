@@ -21,6 +21,7 @@ let randPosition = Math.floor(Math.random() * 4);
 const overlayColor = document.querySelector('#overlay-color');
 const overlay = document.querySelector('#overlay');
 
+const spotlight = document.querySelector('#spotlight');
 
 function handleSubmit() {
     submitModal.style.display = 'block';
@@ -29,6 +30,7 @@ function handleSubmit() {
 
 function handleValidateCode() {
     const code = document.getElementById('code').value;
+    spotlight.style.zIndex = 1000;
 
     let tagetCode = '';
     if (randPosition === 0) {
@@ -42,7 +44,7 @@ function handleValidateCode() {
     }
 
      console.log(tagetCode);
-    if (code === tagetCode || code === '1234') {
+    if (code === tagetCode) {
         submitModal.style.display = 'none';
         overlayColor.style.display = 'none';
         overlay.style.display = 'none';
@@ -56,25 +58,26 @@ function handleValidateCode() {
 const giftClick = document.querySelector('.gift-click');
 const giftBox = document.querySelector('.gift-container .gift-box');
 const giftContainer = document.querySelector('.gift-container');
+const giftContent = document.querySelector('.gift-content');
 const giftShadow = document.querySelector('.gift-shadow');
 
 
-const link = "https://synapse-test.vercel.app/"
 
-giftClick.addEventListener('click', () => {
+function handleGiftClick () {
     if (giftClick.className === 'gift-click') {
         console.log('click');
         giftClick.classList.add('gift-click-active');
         giftBox.classList.add('active');
         giftContainer.classList.add('active');
+        giftContent.classList.add('active');
         giftShadow.classList.add('active');
         giftContainer.style.zIndex = '1000';
     } else {
         giftClick.classList.remove('gift-click-active');
     }
-});
-
+}
 
 export {
+    handleGiftClick,
     handleSubmit
 }
