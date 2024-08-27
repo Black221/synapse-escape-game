@@ -44,7 +44,7 @@ function handleValidateCode() {
     } else {
         tagetCode = `${hoverButtonCode}${randNumber}${colorCode}${spiderCode}`;
     }
-
+    console.log(tagetCode);
     if (code === tagetCode) {
         submitModal.style.display = 'none';
         overlayColor.style.display = 'none';
