@@ -8,7 +8,6 @@ const colors = [
     '#ff0',
     '#f0f',
     '#0ff',
-    'rgba(0, 0, 0, 0.5)'
 ];
 let colorIndex = 0;
 

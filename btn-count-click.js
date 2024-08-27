@@ -20,6 +20,10 @@ function handleCountClick () {
     step = 1;
     currentPosition = 0;
     document.getElementById('advice').style.display = 'block';
+    document.getElementById("advice-1").style.display = 'block';
+    document.getElementById("advice-2").style.display = 'none';
+    document.getElementById("advice-3").style.display = 'none';
+    document.getElementById("btn-fool").style.display = 'block';
     document.getElementById('btn-fool').addEventListener('mouseover', animateButton);
 }
 
@@ -52,7 +56,7 @@ function justOneMoreTime() {
     document.getElementById('btn-fool').removeEventListener('click', justOneMoreTime);
 }
 
-const hoverButtonCode = 6
+const hoverButtonCode = 7
 export {
     handleCountClick,
     hoverButtonCode
