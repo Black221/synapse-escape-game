@@ -28,9 +28,11 @@ function handleSubmit() {
     document.getElementById('validate-code').addEventListener('click', handleValidateCode);
 }
 
+let  canOpenSuprise = false;
+
 function handleValidateCode() {
     const code = document.getElementById('code').value;
-    spotlight.style.zIndex = 1000;
+
 
     let tagetCode = '';
     if (randPosition === 0) {
@@ -43,11 +45,12 @@ function handleValidateCode() {
         tagetCode = `${hoverButtonCode}${randNumber}${colorCode}${spiderCode}`;
     }
 
-     console.log(tagetCode);
     if (code === tagetCode) {
         submitModal.style.display = 'none';
         overlayColor.style.display = 'none';
         overlay.style.display = 'none';
+        spotlight.style.zIndex = 1000;
+        canOpenSuprise = true;
     } else {
     }
 }
@@ -64,17 +67,19 @@ const giftShadow = document.querySelector('.gift-shadow');
 
 
 function handleGiftClick () {
-    if (giftClick.className === 'gift-click') {
-        console.log('click');
-        giftClick.classList.add('gift-click-active');
-        giftBox.classList.add('active');
-        giftContainer.classList.add('active');
-        giftContent.classList.add('active');
-        giftShadow.classList.add('active');
-        giftContainer.style.zIndex = '1000';
-    } else {
-        giftClick.classList.remove('gift-click-active');
-    }
+   if (canOpenSuprise) {
+        if (giftClick.className === 'gift-click') {
+            console.log('click');
+            giftClick.classList.add('gift-click-active');
+            giftBox.classList.add('active');
+            giftContainer.classList.add('active');
+            giftContent.classList.add('active');
+            giftShadow.classList.add('active');
+            giftContainer.style.zIndex = '1000';
+        } else {
+            giftClick.classList.remove('gift-click-active');
+        }
+   }
 }
 
 export {
