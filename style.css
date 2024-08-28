@@ -228,9 +228,10 @@ body {
 #rand-indice{
     position: absolute;
     width: 460px;
-    bottom: 60px;
-    left: 20px;
+    bottom: 40px;
+    left: 10px;
     display: none;
+    font-size: 0.6rem;
 }
 .big-size {
     font-size: 2rem;
