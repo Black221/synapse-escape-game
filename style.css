@@ -152,6 +152,7 @@ body {
 .game-bg {
     position: absolute;
     z-index: -1;
+    height: 100vh;
 }
 
 .mb {
@@ -170,42 +171,41 @@ body {
 
 #btn-color {
     top: -15px;
-    right: 78px;
+    right: 42px;
     background-color: rgba(240, 206, 38, 0.197);
     border: none;
     width: 30px;
-    height: 70px;
+    height: 50px;
 }
 
 #btn-count-click {
-    top: 240px;
-    left: 435px;
+    top: 148px;
+    left: 278px;
     background-color: rgba(49, 90, 17, 0.197);
     border: none;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
 }
 
 #btn-rand-number {
-    bottom: 135px;
-    left: 140px;
+    bottom: 84px;
+    left: 88px;
     background-color: #70b9e0ae;
     border: none;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
 
 #btn-spider {
-    top: 30px;
-    right: 205px;
+    top: 15px;
+    right: 128px;
     background-color: #895b1b4e;
     border: none;
-    width: 30px;
-    height: 30px;
+    font-size: 1.2rem;
 }
 
 #btn-submit {
-    bottom: 300px;
+    bottom: 160px;
     left: -50px;
     background-color: #f4b836;
     color: white;
@@ -253,11 +253,12 @@ input {
 }
 
 .gift-container {
+    scale: 0.5;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 100px;
+    bottom: 140px;
     right: 10px;
     z-index: 1000;
 }
@@ -351,7 +352,7 @@ input {
     width: 340px;
     height: 40px;
     background: rgba(0, 0, 0, .4);
-    top: 100px;
+    top:80px;
     border-radius: 50%;
     left: -4px;
     animation: BounceOut 4s ease infinite forwards;
