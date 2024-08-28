@@ -7,7 +7,7 @@ import { handleSubmit, handleGiftClick } from './btn-submit.js';
 
 window.addEventListener('click', handleClick);
 
-
+let modalOpen = false;
 
 function handleClick(e) {
     document.elementsFromPoint(e.clientX, e.clientY).find((element) => {
@@ -22,9 +22,10 @@ function handleClick(e) {
 
         else if (element.classList.contains('modal-btn-close')) {
             handleModalClose();
+            modalOpen = false;
         }
 
-        else if (element.id === 'btn-color') {
+        else if (element.id === 'btn-color' && !modalOpen) {
             handleColorAnimation();
         } 
         
@@ -35,6 +36,7 @@ function handleClick(e) {
         else if (element.id === 'btn-count-click') {
             console.log('btn-count-click');
             handleCountClick();
+            modalOpen = true;
         }
 
         else if (element.id === 'btn-rand-number') {
@@ -43,6 +45,7 @@ function handleClick(e) {
 
         else if (element.id === 'btn-submit') {
             handleSubmit();
+            modalOpen = true;
         }
     });
 }
