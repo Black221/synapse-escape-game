@@ -33,17 +33,8 @@ let  canOpenSuprise = false;
 function handleValidateCode() {
     const code = document.getElementById('code').value;
 
-
-    let tagetCode = '';
-    if (randPosition === 0) {
-        tagetCode = `${randNumber}${colorCode}${spiderCode}${hoverButtonCode}`;
-    } else if (randPosition === 1) {
-        tagetCode = `${colorCode}${spiderCode}${hoverButtonCode}${randNumber}`;
-    } else if (randPosition === 2) {
-        tagetCode = `${spiderCode}${hoverButtonCode}${randNumber}${colorCode}`;
-    } else {
-        tagetCode = `${hoverButtonCode}${randNumber}${colorCode}${spiderCode}`;
-    }
+    let tagetCode = `${randNumber}${colorCode}${spiderCode}${hoverButtonCode}`;
+   
     if (code === tagetCode) {
         submitModal.style.display = 'none';
         overlayColor.style.display = 'none';
