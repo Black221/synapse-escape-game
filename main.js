@@ -43,7 +43,7 @@ function handleClick(e) {
             handleRandomNumber();
         }
 
-        else if (element.id === 'btn-submit') {
+        else if (element.id === 'btn-submit' || element.id === 'btn-submit2') {
             handleSubmit();
             modalOpen = true;
         }
