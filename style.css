@@ -34,7 +34,7 @@ body {
     position: absolute;
     top: -50%;
     left: -50%;
-    z-index: 1;
+    z-index: 2;
 }
 
 #overlay-color {
@@ -215,6 +215,19 @@ body {
     height: 40px;
 }
 
+#btn-submit2 {
+    top: 30px;
+    left: 30px;
+    background-color: #f4b836;
+    color: white;
+    font-weight: 700;
+    border: none;
+    width: 100px;
+    height: 40px;
+    z-index: 1;
+    position: absolute;
+}
+
 #spider-animation{
     position: absolute;
     z-index: 100;
@@ -249,7 +262,8 @@ input {
 }
 
 .gitf-gift {
-    bottom: -50px;
+    bottom: 0px;
+    scale: 0.5;
 }
 
 .gift-container {
@@ -351,7 +365,7 @@ input {
     width: 340px;
     height: 40px;
     background: rgba(0, 0, 0, .4);
-    top: 100px;
+    top: 80px;
     border-radius: 50%;
     left: -4px;
     animation: BounceOut 4s ease infinite forwards;
